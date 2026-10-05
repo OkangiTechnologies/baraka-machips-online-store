@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="sw">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Baraka Machips — Delicious chips and mishkaki with fast local delivery. Order via WhatsApp or email." />
+    <title>Baraka Machips — The Taste You Can Talk About</title>
+
+    <!-- Preconnect & font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root{
+        --brand-1: #ff6f61;
+        --brand-2: #ff6347;
+        --accent: #ffcc00;
+        --bg: #f7f7f7;
+        --muted: #6b7280;
+        --card-shadow: 0 8px 24px rgba(16,24,40,0.06);
+        --radius: 12px;
+        --max-width: 1100px;
+      }
+
+      *{box-sizing:border-box}
+      html,body{height:100%}
+      body{
+        margin:0;
+        font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        background:var(--bg);
+        color:#111827;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+        line-height:1.5;
+      }
+
+      .container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+
+      /* Header / Hero */
+      header.hero{
+        background:linear-gradient(135deg,var(--brand-2),var(--brand-1));
+        color: #fff;
+        padding:64px 0;
+        border-bottom:4px solid rgba(0,0,0,0.06);
+      }
+      .hero-inner{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+      .hero-content{flex:1;min-width:260px}
+      .brand-title{font-size:clamp(1.6rem,4vw,2.8rem);letter-spacing:1px;font-weight:700;text-transform:uppercase}
+      .hero-sub{margin-top:12px;font-size:1.05rem;opacity:0.95}
+      .hero-cta{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap}
+
+      /* Buttons */
+      .btn{
+        display:inline-block;padding:12px 20px;border-radius:999px;font-weight:600;text-decoration:none;border:none;cursor:pointer;
+      }
+      .btn-primary{background:var(--accent);color:#111}
+      .btn-outline{background:transparent;border:2px solid rgba(255,255,255,0.18);color:#fff}
+      .btn:focus{outline:3px solid rgba(255,204,0,0.25);outline-offset:3px}
+
+      /* Products */
+      section.products{padding:54px 0}
+      .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+      .card{background:#fff;border-radius:var(--radius);box-shadow:var(--card-shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+      .card img{width:100%;border-radius:8px;object-fit:cover}
+      .card h3{margin:0;font-size:1.1rem;text-transform:uppercase}
+      .price-list{list-style:none;padding:0;margin:0;color:var(--muted)}
+      .price-list li{padding:6px 0;border-bottom:1px dashed #f1f1f1}
+      .delivery{color:var(--brand-1);font-weight:600;margin-top:8px}
+
+      /* Contact */
+      section.contact{padding:56px 0}
+      .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:24px}
+      .contact-form{background:#fff;padding:20px;border-radius:var(--radius);box-shadow:var(--card-shadow)}
+      label{display:block;font-weight:600;margin-bottom:8px;font-size:0.95rem}
+      input[type="text"],input[type="email"],textarea{width:100%;padding:10px;border:1px solid #e6e6e6;border-radius:8px;font-family:inherit}
+      textarea{min-height:140px;resize:vertical}
+      .contact-info{background:#fff;padding:20px;border-radius:var(--radius);box-shadow:var(--card-shadow)}
+      .contact-info p{margin:8px 0;color:var(--muted)}
+
+      /* Footer */
+      footer{padding:24px 0;color:#fff;background:#0f1724;margin-top:36px}
+      footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+
+      /* Small screens */
+      @media (max-width:800px){
+        .hero-inner{flex-direction:column;align-items:flex-start}
+        .contact-grid{grid-template-columns:1fr}
+        footer .container{flex-direction:column;align-items:flex-start}
+      }
+
+      /* Utility */
+      .muted{color:var(--muted)}
+      .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+    </style>
+  </head>
+  <body>
+    <header class="hero" role="banner">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="brand-title">Baraka Machips</h1>
+          <p class="hero-sub">THE TASTE YOU CAN TALK ABOUT — CHIPS tamu na mishkaki laini, delivery ya haraka kwa maeneo ya jirani.</p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#buy">Nunua Sasa</a>
+            <a class="btn btn-outline" href="https://wa.me/255741825096?text=Nahitaji%20kuoda%20:%20" rel="noopener noreferrer" target="_blank">Agiza kwa WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <!-- Replace chips.jpg with a high-res photo for best results -->
+          <img src="chips.jpg" alt="Baraka Machips - chips na mishkaki" style="max-width:320px;border-radius:12px;box-shadow:var(--card-shadow);" loading="lazy">
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="products container" id="buy" aria-labelledby="products-heading">
+        <h2 id="products-heading" style="margin-bottom:18px">Our Menu</h2>
+
+        <div class="products-grid">
+          <article class="card" aria-labelledby="p1">
+            <img src="chips.jpg" alt="Chips Kavu Normal" loading="lazy">
+            <h3 id="p1">Chips Kavu Normal</h3>
+            <p class="muted">Crispy &amp; golden — portion size standard.</p>
+            <p class="delivery">1000 Tsh</p>
+          </article>
+
+          <article class="card" aria-labelledby="p2">
+            <img src="chips.jpg" alt="Chips Kavu Heavy" loading="lazy">
+            <h3 id="p2">Chips Kavu Heavy</h3>
+            <p class="muted">Extra portion for bigger appetite.</p>
+            <p class="delivery">1500 Tsh</p>
+          </article>
+
+          <article class="card" aria-labelledby="p3">
+            <img src="chips.jpg" alt="Chips Mayai Mawili" loading="lazy">
+            <h3 id="p3">Chips Mayai Mawili</h3>
+            <p class="muted">Includes two boiled eggs.</p>
+            <p class="delivery">2000 Tsh</p>
+          </article>
+
+          <article class="card" aria-labelledby="p4">
+            <img src="chips.jpg" alt="Chips Mayai Matatu" loading="lazy">
+            <h3 id="p4">Chips Mayai Matatu</h3>
+            <p class="muted">Includes three boiled eggs.</p>
+            <p class="delivery">2500 Tsh</p>
+          </article>
+
+          <article class="card" aria-labelledby="p5">
+            <img src="mishkaki.jpg" alt="Mshikaki" loading="lazy">
+            <h3 id="p5">Mshikaki</h3>
+            <ul class="price-list" aria-hidden="false">
+              <li>Mshikaki Moja — 300 Tsh</li>
+              <li>Mishikaki Miwili — 500 Tsh</li>
+            </ul>
+          </article>
+        </div>
+
+        <p style="margin-top:16px" class="muted">Ofisi zetu zipo karibu na kituo cha bodaboda, dispensary ya Inyala. Tunafanya delivery kwa maeneo yote ya jirani.</p>
+
+      </section>
+
+      <section class="contact container" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" style="margin-bottom:12px">Wasiliana Nasi</h2>
+        <div class="contact-grid">
+          <div class="contact-form">
+            <form action="https://formsubmit.co/thomasokangi19@gmail.com" method="POST" aria-label="Contact form">
+              <input type="hidden" name="_captcha" value="true">
+              <input type="hidden" name="_subject" value="New message from Baraka Machips">
+              <input type="hidden" name="_autoresponse" value="Asante kwa kuwasiliana nasi. Tutakujibu hivi karibuni.">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_next" value="/thank-you.html">
+
+              <div style="margin-bottom:12px">
+                <label for="name">Jina</label>
+                <input id="name" name="name" type="text" required>
+              </div>
+
+              <div style="margin-bottom:12px">
+                <label for="email">Barua pepe</label>
+                <input id="email" name="email" type="email" required>
+              </div>
+
+              <div style="margin-bottom:12px">
+                <label for="message">Ujumbe</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Tuma Ujumbe</button>
+            </form>
+          </div>
+
+          <aside class="contact-info" aria-labelledby="info-heading">
+            <h3 id="info-heading">Maelezo ya Mawasiliano</h3>
+            <p class="muted">Email: <a href="mailto:thomasokangi19@gmail.com">thomasokangi19@gmail.com</a></p>
+            <p class="muted">WhatsApp: <a href="https://wa.me/255741825096" rel="noopener noreferrer" target="_blank">+255 741 825 096</a></p>
+            <p class="muted">Delivery: Tunafanya delivery kwa maeneo yote ya jirani. Ofisi zetu zipo karibu na kituo cha bodaboda, dispensary ya Inyala.</p>
+
+            <p style="margin-top:10px"><strong>Order now:</strong></p>
+            <p><a class="btn btn-primary" href="https://wa.me/255741825096?text=Nahitaji%20kuoda%20:%20" rel="noopener noreferrer" target="_blank">Agiza kwa WhatsApp</a></p>
+            <p style="margin-top:8px"><a class="btn" href="mailto:thomasokangi19@gmail.com">Agiza kwa Email</a></p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="container">
+        <div class="muted">&copy; 2025 Baraka Machips. All rights reserved.</div>
+        <div class="muted">Contact: <a href="mailto:thomasokangi19@gmail.com">thomasokangi19@gmail.com</a> | +255 741 825 096</div>
+      </div>
+    </footer>
+  </body>
+</html>
